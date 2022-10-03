@@ -177,7 +177,7 @@ const [tags ,setTags]=useState(searchParams)
                 <div style={{marginTop:'25px'}}>
                 <InputBase 
                     className={classes.input1}
-                    style={{fontFamily:'IBM Plex Sans, sans-serif',borderRadius:30,fontsize:14,paddingLeft:30}}
+                    style={{fontFamily:'IBM Plex Sans, sans-serif',borderRadius:5,fontsize:14,paddingLeft:30}}
                     placeholder='Enter Property Id or Link'
                     value={theLink}
                     onChange={(e)=>setTheLink(e.target.value)}

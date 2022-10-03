@@ -1,8 +1,9 @@
 import axios from 'axios'
 
-const API = axios.create({baseURL:'http://localhost:8000'})
+const API = axios.create({baseURL:'https://korriapp.herokuapp.com/'})
+// const API = axios.create({baseURL:'http://localhost:8000'})
 
-const url = 'http://localhost:8000'
+const url = 'https://korriapp.herokuapp.com/'
 API.interceptors.request.use((req)=>{
     const localStorageData = JSON.parse(localStorage.getItem('userProfile')) 
     if (localStorageData){
