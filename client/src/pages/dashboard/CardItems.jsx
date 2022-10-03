@@ -249,7 +249,7 @@ const {width } = useWindowDimemsions()
                                             // totalImage.filter((targetIs)=> targetIs !== mediaPreprocessor))
                                             editGlobalProperty(each,index) 
                                         }}
-                                            style={{paddingLeft:'4px',color:'orange'}}> Edit Property </strong></Typography>
+                                            style={{paddingLeft:'4px',color:'orange',fontFamily:'IBM Plex Sans, sans-serif',}}> Edit Property </strong></Typography>
                                           </div> 
                                      </div>
                                 {/* <div> </div> */}

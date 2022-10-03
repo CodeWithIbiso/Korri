@@ -32,7 +32,7 @@ export default function CardItems({classes}) {
                                 <CardMedia className={classes.cardMedia}  image={each.Image[0]}  title='Products' />  
                             </Card>
                             <div style={{marginTop: '15px',display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center'}}>
-                            <Typography variant='body2' align='center'className={classes.cardobjectsNew}>
+                            <Typography variant='body2' align='center'className={classes.cardobjectsNew} style={{fontFamily:'IBM Plex Sans, sans-serif',fontWeight:300}}>
                                         {each.PropertyType!==''&& (each.PropertyType + ' | ')}{each.DateAvailable!==''&& 'Available since '+each.DateAvailable + ' | '}{each.Location!==''&& 'Located in : '+each.Location + ' | '}
                                         {each.Bedrooms!==''&& (each.Bedrooms + ' Bedrooms | ')}{each.Baths!==''&& each.Baths + ' Baths | '}
                                         {each.Designation!==''&& 'Designated '+(each.Designation + ' | ')}{each.Kitchen!==''&& each.Kitchen + ' Kitchens | '}
@@ -42,11 +42,11 @@ export default function CardItems({classes}) {
                                     </Typography>
                                     <div>
                                         {ids.includes(each._id)?
-                                      <Typography variant='body2' align='center'className={classes.cardobjectsNew}><strong>Queued | <strong style={{color:'orange'}} onClick={()=>deque({index:each._id})}>Deque |</strong></strong>
+                                      <Typography variant='body2' align='center'className={classes.cardobjectsNew} style={{fontFamily:'IBM Plex Sans, sans-serif',}}><strong>Queued | <strong style={{color:'orange'}} onClick={()=>deque({index:each._id})}>Deque |</strong></strong>
                                       <Link style={{textDecoration:'none',color:'black' }} to={'/gallery' }><strong onClick={()=> queue === false && dispatch(setQueueVisibility())}  > view queue</strong></Link></Typography> 
                                      :
                                      <div>{
-                                     reduxStoreQueueFull<5 && !ids?.includes(each._id) &&<Typography variant='body2'onClick={(e)=>{ dispatch(addQueue(each)) ;}}   align='center'className={classes.cardobjectsNew}><strong>Add to queue</strong>  </Typography> 
+                                     reduxStoreQueueFull<5 && !ids?.includes(each._id) &&<Typography variant='body2'onClick={(e)=>{ dispatch(addQueue(each)) ;}}   align='center'className={classes.cardobjectsNew} style={{fontFamily:'IBM Plex Sans, sans-serif',}}><strong>Add to queue</strong>  </Typography> 
                                     }{ reduxStoreQueueFull>4 && !ids?.includes(each._id) && <Typography variant='body2'  align='center'className={classes.cardobjectsNew} style={{color:'gray',textDecoration:''}}><strong>Add to queue</strong>  </Typography> 
                                       }
                                     </div>

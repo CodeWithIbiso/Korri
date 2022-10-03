@@ -23,8 +23,8 @@ const useStyles = makeStyles({
         fontSize:'14px',
         fontFamily: 'Segoe UI',
         fontWeight:'bold',
-        color:'#fafafa'
-
+        color:'#fafafa',
+        fontFamily:'IBM Plex Sans, sans-serif',
     },
     menu2:{
         textDecoration:'none',
@@ -34,8 +34,8 @@ const useStyles = makeStyles({
         fontFamily: 'Segoe UI',
         fontWeight:'100',
         color:'#fafafa',
-        letterSpacing:'1px'
-
+        letterSpacing:'1px',
+        fontFamily:'IBM Plex Sans, sans-serif',
     },
     direction:{
         flexDirection: 'column'
@@ -44,13 +44,14 @@ const useStyles = makeStyles({
         textAlign:'center',
         fontWeight:'bold',
         color:'#eeeeebc',
-        fontFamily:'Segoe UI'
+        fontFamily:'Segoe UI',
+        fontFamily:'IBM Plex Sans, sans-serif',
     },
     search:{
         opacity:'0.6',
         padding:'0px 8px',
         fontSize:'0.8rem',
-        '& :hover':{
+        fontFamily:'IBM Plex Sans, sans-serif', '& :hover':{
                 backgroundColor:'#f2f2f2'
         }
     },
@@ -149,7 +150,7 @@ function Navbar({comp}) {
                         </Grid>
                         <Grid item  xs={8}  sm={8}  >
                             {/* <Facebook color='secondary' />  */}
-                            <Typography variant='h6' component={Link} to='/about'  className={classes.menu2}><strong style={{color:'orange',fontStyle:'italic'}}>Contact us:</strong>   email@gmail.com</Typography> 
+                            <Typography variant='h6' component={Link} to='/about'  className={classes.menu2}><strong style={{color:'orange',fontFamily:'IBM Plex Sans, sans-serif',fontStyle:'italic'}}>Contact us:</strong>   email@gmail.com</Typography> 
                         </Grid>
                     </Grid>
                 </Grid>

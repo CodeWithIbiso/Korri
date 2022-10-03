@@ -290,28 +290,28 @@ export default function Body() {
                 <div style={{fontWeight:"bold"}}>  
 
                     {result === 'store' && current==='' ?  
-                    <Chip label='CURRENT PROPERTIES' variant='outlined'  style={{color:'white',background:'#263238',borderColor:'orange'}}   className={classes.font2}/>
-                    :<Chip label='CURRENT PROPERTIES' onClick={currentProperties}  variant='outlined'   className={classes.font2}/>
+                    <Chip label='CURRENT PROPERTIES' variant='outlined'  style={{color:'white',background:'#263238',borderColor:'orange',fontFamily:'IBM Plex Sans, sans-serif',}}   className={classes.font2}/>
+                    :<Chip label='CURRENT PROPERTIES' onClick={currentProperties}  variant='outlined'   className={classes.font2} style={{fontFamily:'IBM Plex Sans, sans-serif',}}/>
                     }
                     {result === 'buy' ? 
-                    <Chip label='FOR SALE' variant='outlined'   className={classes.font2}  style={{color:'white',background:'#263238',borderColor:'orange'}}/>
-                    :<Chip label='FOR SALE' variant='outlined' onClick={forSale}  className={classes.font2}/>
+                    <Chip label='FOR SALE' variant='outlined'   className={classes.font2}  style={{color:'white',background:'#263238',borderColor:'orange',fontFamily:'IBM Plex Sans, sans-serif',}}/>
+                    :<Chip label='FOR SALE' variant='outlined' onClick={forSale}  className={classes.font2} style={{fontFamily:'IBM Plex Sans, sans-serif',}}/>
                     }
                    {result === 'rent'? 
-                     <Chip label='FOR RENT' variant='outlined'   className={classes.font2} style={{color:'white',background:'#263238',borderColor:'orange'}}/>
-                    :<Chip label='FOR RENT' variant='outlined' onClick={forRent}    className={classes.font2} />
+                     <Chip label='FOR RENT' variant='outlined'   className={classes.font2} style={{color:'white',background:'#263238',borderColor:'orange',fontFamily:'IBM Plex Sans, sans-serif',}}/>
+                    :<Chip label='FOR RENT' variant='outlined' onClick={forRent}    className={classes.font2} style={{fontFamily:'IBM Plex Sans, sans-serif',}} />
                     }
                     {current === 'apartments'?
-                    <Chip label='CARS' variant='outlined' onClick={()=>setCurrent('cars')}  style={{color:'white',background:'#263238',borderColor:'orange'}}   className={classes.font2}/>
-                    :<Chip label='CARS' variant='outlined' onClick={cars}    className={classes.font2}/>
+                    <Chip label='CARS' variant='outlined' onClick={()=>setCurrent('cars')}  style={{color:'white',background:'#263238',borderColor:'orange',fontFamily:'IBM Plex Sans, sans-serif',}}   className={classes.font2}/>
+                    :<Chip label='CARS' variant='outlined' onClick={cars}    className={classes.font2} style={{fontFamily:'IBM Plex Sans, sans-serif',}} />
                     }
                     {current === 'shops'?
-                    <Chip label='LAND' variant='outlined' onClick={()=>{setCurrent('land')}}  style={{color:'white',background:'#263238',borderColor:'orange'}} className={classes.font2}/> 
-                    :<Chip label='LAND' variant='outlined' onClick={land}  className={classes.font2}/> 
+                    <Chip label='LAND' variant='outlined' onClick={()=>{setCurrent('land')}}  style={{color:'white',background:'#263238',borderColor:'orange',fontFamily:'IBM Plex Sans, sans-serif',}} className={classes.font2}/> 
+                    :<Chip label='LAND' variant='outlined' onClick={land}  className={classes.font2} style={{fontFamily:'IBM Plex Sans, sans-serif',}} /> 
                     }
                     {current === 'shops'?
-                    <Chip label='SCRAPS' variant='outlined' onClick={()=>{setCurrent('scraps')}}  style={{color:'white',background:'#263238',borderColor:'orange'}} className={classes.font2}/> 
-                    :<Chip label='SCRAPS' variant='outlined' onClick={scraps}  className={classes.font2}/> 
+                    <Chip label='SCRAPS' variant='outlined' onClick={()=>{setCurrent('scraps')}}  style={{color:'white',background:'#263238',borderColor:'orange',fontFamily:'IBM Plex Sans, sans-serif',}} className={classes.font2}/> 
+                    :<Chip label='SCRAPS' variant='outlined' onClick={scraps}  className={classes.font2} style={{fontFamily:'IBM Plex Sans, sans-serif',}} /> 
                     }
                     {reduxStoreQueue.length>=1 &&<Chip onClick={handleQueue} label={queue===false? 'OPEN QUEUE':'CLOSE QUEUE'} variant='outlined'   className={classes.font2}/>}               
                     

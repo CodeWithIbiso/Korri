@@ -35,7 +35,9 @@ const useStyles = makeStyles({
         fontWeight:'small'  
     },
     texts:{
-        fontFamily:'Segoe UI'
+        fontFamily:'Segoe UI',
+        fontFamily:'IBM Plex Sans, sans-serif',
+        fontWeight:100,
     },
     btn:{
         fontFamily:'Segoe UI',
@@ -54,7 +56,7 @@ const useStyles = makeStyles({
         // borderRadius:'12px',
         fontSize:'14px',
         fontFamily:'segoe ui',
-        marginBottom:'15px',
+        fontFamily:'IBM Plex Sans, sans-serif',marginBottom:'15px',
         height:'35px',
         '& ::placeholder':{
             color:'black',
@@ -73,7 +75,7 @@ const useStyles = makeStyles({
         borderRadius:'25px', 
         fontSize:'14px',
         fontFamily:'segoe ui',
-        marginBottom:'15px',
+        fontFamily:'IBM Plex Sans, sans-serif',marginBottom:'15px',
         height:'65px',
         '& ::placeholder':{
             color:'black',
@@ -175,6 +177,7 @@ const [tags ,setTags]=useState(searchParams)
                 <div style={{marginTop:'25px'}}>
                 <InputBase 
                     className={classes.input1}
+                    style={{fontFamily:'IBM Plex Sans, sans-serif',borderRadius:30,fontsize:14,paddingLeft:30}}
                     placeholder='Enter Property Id or Link'
                     value={theLink}
                     onChange={(e)=>setTheLink(e.target.value)}

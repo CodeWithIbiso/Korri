@@ -102,7 +102,7 @@ const [tags ,setTags]=useState(searchParams)
                 />
          <Grid container  spacing={2} style={{background:'',height:'200px',padding:'15px'}}>
                 <Grid item xs={6}> 
-                <div className={classes.secondDiv}><Typography className={classes.theText}>Category</Typography><InputBase name={'Category'} className={classes.theInput} onChange={handleValue} value={tags.Category} placeholder={'For sale'} startAdornment={<Typography fontSize='small' style={{fontSize:'12px',color:'gray',paddingRight:'5px'}}></Typography>}/></div>
+                <div className={classes.secondDiv}><Typography className={classes.theText}>Category</Typography><InputBase name={'Category'} className={classes.theInput} onChange={handleValue} value={tags.Category} placeholder={'For sale'} startAdornment={<Typography fontSize='small' style={{fontSize:'12px',color:'gray',paddingRight:'5px',}}></Typography>}/></div>
                 <div className={classes.secondDiv}><Typography className={classes.theText}>Min price</Typography><InputBase name={'minPrice'}  className={classes.theInput} onChange={handleValue} value={tags.minPrice} placeholder={'50000'} startAdornment={<Typography fontSize='small' style={{fontSize:'12px',color:'gray',paddingRight:'5px'}}></Typography>}/></div>
                 <div className={classes.secondDiv}><Typography className={classes.theText}>Baths</Typography><InputBase name={'Baths'}  className={classes.theInput} onChange={handleValue} value={tags.Baths} placeholder={'3'}  startAdornment={<Typography fontSize='small' style={{fontSize:'12px',color:'gray',paddingRight:'5px'}}></Typography>}/></div>
                 <div className={classes.secondDiv}><Typography className={classes.theText}>Furnished</Typography><InputBase name={'Furnished'}  className={classes.theInput} onChange={handleValue} placeholder={'yes'}  value={tags.Furnished} startAdornment={<Typography fontSize='small' style={{fontSize:'12px',color:'gray',paddingRight:'5px'}}></Typography>}/></div>
@@ -119,17 +119,17 @@ const [tags ,setTags]=useState(searchParams)
                     <Test text={'Room size'}/> */}
                 </Grid>
          </Grid>
-            <Button onClick={searchProperty} style={{minWidth:'100%',marginTop:'52px',borderRadius:'0px',background:'',fontSize:'12px'}} color='primary' variant='contained'>Search</Button>
+            <Button onClick={searchProperty} style={{minWidth:'100%',marginTop:'62px',borderRadius:'40px',background:'',fontSize:'12px'}} color='primary' variant='contained'>Search</Button>
         </Paper >
         <Paper style={{padding:'15px',marginLeft:'15px',marginTop:'30px'}}>
-            <Typography variant='body2' style={{paddingBottom:'15px'}}><strong>Properties in Nigeria</strong></Typography>
+            <Typography variant='body2' style={{paddingBottom:'15px',fontFamily:'IBM Plex Sans, sans-serif',}}><strong>Properties in Nigeria</strong></Typography>
             {values.map((value,index)=>   
             <Grid key={index} container style={{marginBottom:"6px"}}>
                  <Grid item xs={9}>
-                 <Typography style={{color:'#263238',fontSize:'14px',fontFamily:'segoe ui',fontWeight:'600'}}>{value}</Typography>
+                 <Typography style={{color:'#263238',fontSize:'14px',fontFamily:'segoe ui',fontWeight:'600',fontFamily:'IBM Plex Sans, sans-serif',}}>{value}</Typography>
                  </Grid>
                  <Grid item xs={3}>
-                 <Typography style={{color:'#263238',fontSize:'14px',fontFamily:'segoe ui',fontWeight:'600'}}>{numbers[index]}</Typography>
+                 <Typography style={{color:'#263238',fontSize:'14px',fontFamily:'segoe ui',fontWeight:'600',fontFamily:'IBM Plex Sans, sans-serif',}}>{numbers[index]}</Typography>
                     {/* <Typography style={{fontFamily:'segeo ui',margin:'0px',fontWeight:'800',color:'gray'}}>{value}</Typography>            */}
                  </Grid>
             </Grid> 

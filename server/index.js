@@ -5,14 +5,19 @@ import cors from 'cors'
 import propertyRoutes from './routes/properties.js'
 import userRoutes from './routes/user.js' 
 
-
-const CONNECTION_URL = 'mongodb://localhost:27017/base'
-const PORT = process.env.PORT || 5000
+ 
+const CONNECTION_URL = 'mongodb+srv://dennie:dennie123@cluster0.kfsfa.mongodb.net/?retryWrites=true&w=majority'
+// const CONNECTION_URL = 'mongodb+srv://dennie:dennie@cluster0.kfsfa.mongodb.net/?retryWrites=true&w=majority'
+const PORT = process.env.PORT || 8000
 const app = express()
-
+ 
 mongoose.connect(CONNECTION_URL,{useNewUrlParser:true,useUnifiedTopology:true})
 .then(()=>app.listen(PORT,()=>console.log(`Server running on port ${PORT}`)))
-.catch((error)=>console.log(error)) ;
+.catch((error)=>console.log("error",error)) ;
+ 
+// mongoose.connect(CONNECTION_URL,{useNewUrlParser:true,useUnifiedTopology:true})
+// .then(()=>app.listen(PORT,()=>console.log(`Server running on port ${PORT}`)))
+// .catch((error)=>console.log("error",PORT,error)) ;
 // Are we not going to close connection to database after every request?
 
 

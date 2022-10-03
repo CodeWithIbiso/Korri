@@ -105,7 +105,7 @@ let searchState
                                                   }   align='center'className={classes.cardobjectsNew}><strong>Add to queue</strong>  
                                      </Typography> 
                                       }{reduxStoreQueueFull>4 && !cueIds?.includes(each._id) &&  
-                                        <Typography variant='body2' align='center'className={classes.cardobjectsNew} style={{color:'gray',textDecoration:''}}><strong>Add to queue</strong>  
+                                        <Typography variant='body2' align='center'className={classes.cardobjectsNew} style={{color:'gray',textDecoration:'',fontFamily:'IBM Plex Sans, sans-serif',}}><strong>Add to queue</strong>  
                                         {/* <Typography variant='body2' align='center'className={classes.cardobjectsNew} style={{color:'gray',textDecoration:'line-through'}}><strong>Add to queue</strong>   */}
                                           </Typography>  }
                                           </div>

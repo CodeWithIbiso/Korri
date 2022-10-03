@@ -716,14 +716,10 @@ const handleUpdate=()=>{
         <Grid container>
             <Grid item sm={6}>
 
-                    <Paper style={{borderRadius:0,fontFamily:'segoe ui' ,lineHeight:'5px', padding:15,minWidth:'50px',background:'#f8bbd0',minHeight:'50px',marginTop:10,color:''}}>
-                      <strong style={{fontWeight:500,lineHeight:'25px'}}><h3 style={{marginTop:0, fontWeight:700,marginBottom:0}}>DISCLAIMER:</h3>This property is a five bedroom flat with a pool in the 
-                      living room, it has sharks in the toilet but hold on they work here.
-                      So if youre interested ..... check it out , book and lots more. We've
-                      got you covered.it has sharks in the toilet but hold on they work here.
-                      So if youre interested ..... check it out , book and lots more. We've
-                      got you covered.</strong>
-                    </Paper>
+            <Paper style={{borderRadius:0,fontFamily:'segoe ui' ,lineHeight:'5px', padding:15,minWidth:'50px',background:'#ff80ab',minHeight:'50px',marginTop:10,color:''}}>
+                       <strong style={{fontWeight:700,lineHeight:'25px',fontFamily:'IBM Plex Sans, sans-serif',}}><h3 style={{marginTop:0, fontWeight:500,marginBottom:0,fontFamily:'IBM Plex Sans, sans-serif',}}>DISCLAIMER:</h3>
+                       Properties on our platform are not verified , do well to verify with seller to prevent scams and false advertising. Korri give sellers and buyers the opportunity to display and find properties but does not monitor the validity of these properties</strong>
+                     </Paper>
             </Grid>
         </Grid>
         </Container> 

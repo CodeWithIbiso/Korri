@@ -65,11 +65,11 @@ export default function Body() {
         <Grid container className={classes.container}> 
             <Grid item sm={9} className={classes.row}>
                  <Paper className={classes.paper}>
-                     <Typography variant='h6'  className={classes.font2}>ABOUT US</Typography>
+                     <Typography variant='h6'  className={classes.font2} style={{fontFamily:'IBM Plex Sans, sans-serif',}}>ABOUT US</Typography>
                      <Abouts/>
                  </Paper>  
                  <Paper className={classes.paper}>
-                     <Typography variant='h6'  className={classes.font2}>FAQs</Typography>
+                     <Typography variant='h6'  className={classes.font2} style={{fontFamily:'IBM Plex Sans, sans-serif',}}>FAQs</Typography>
                      <Abouts/>
                  </Paper>
             </Grid>

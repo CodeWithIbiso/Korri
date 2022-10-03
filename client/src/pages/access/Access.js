@@ -140,19 +140,30 @@ export default function Access() {
               <Grid item xs={12} sm={7} style={{width:'100%', backgroundImage:`url(${signing === true ? img:img2})`, backgroundPosition:'center',backgroundSize:'cover',backgroundRepeat:'no-repeat', height:'120vh' }}>
                      <Container  className={signing===false?classes.arrange:classes.leftItem}>
                         <div style={{padding:'25px'}}>
-                        <Typography component={Link} to='/'  variant='h4' className={classes.link} style={{color:signing===true?'black':'white'}}>Korri</Typography> 
+                        <Typography component={Link} to='/'  variant='h4' className={classes.link} style={{color:signing===true?'black':'white',fontFamily:'IBM Plex Sans, sans-serif',}}>Korri</Typography> 
                          </div> 
                         <div style={{padding:'25px', color: "black", paddingBottom:'0px',marginTop:'80px'}}>
-                         <Typography variant='h5' style={{fontFamily: 'Segoe UI',color:signing===true?'black':'white',fontWeight:'bold',padding:'12px'}}>{signing === true ? 'Join Us': 'Welcome Back'}</Typography>  
+                         <Typography variant='h5' style={{fontFamily: 'Segoe UI',color:signing===true?'black':'white',fontWeight:'bold',padding:'12px',fontFamily:'IBM Plex Sans, sans-serif',}}>{signing === true ? 'Join Us': 'Welcome Back'}</Typography>  
                          </div>
                         <div style={{ padding:'25px',  paddingTop:'0px', color: "black"  }} >
-                            <Typography variant='body2' style={{fontFamily: 'Segoe UI',color:signing===true?'black':'white',fontWeight:'800',padding:'12px',lineHeight:'32px',fontSize:'18px'}}>
-                                { signing === true ? 
-                               'Tu Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nisi mauris, facilisis non augue non, auctor vehicula erat. Fusce vel diam lacinia, rhoncus nulla vitae, tincidunt tellus. Aenean laoreet aliquet nisi at posuere. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut eu dolor et felis sodales ultricies non eu metus.': 
-                               'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nisi mauris, facilisis non augue non, auctor vehicula erat. Fusce vel diam lacinia, rhoncus nulla vitae, tincidunt tellus. Aenean laoreet aliquet nisi at posuere. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut eu dolor et felis sodales ultricies non eu metus.'
-                               }
+                            { signing === true ?  <div  style={{fontFamily: 'Segoe UI',color:signing===true?'black':'white',fontWeight:'00',padding:'12px',lineHeight:'32px',fontSize:'18px',fontFamily:'IBM Plex Sans, sans-serif'}}>
+                                <Typography variant='body2' style={{fontFamily: 'Segoe UI',color:signing===true?'black':'white',fontWeight:'bold' ,lineHeight:'32px',fontSize:'18px',fontFamily:'IBM Plex Sans, sans-serif'}}>
+                               
+                               Glad to have you join us. Korri offeres a wide variety of properties  
+                               
                                 
                             </Typography> 
+                            <Typography variant='body2' style={{fontFamily: 'Segoe UI',color:signing===true?'black':'white',fontWeight:'bold',lineHeight:'32px',fontSize:'18px',fontFamily:'IBM Plex Sans, sans-serif'}}>
+                               
+                               Just for you. 
+                               
+                                
+                            </Typography> </div>: <Typography variant='body2' style={{fontFamily: 'Segoe UI',color:signing===true?'black':'white',fontWeight:'00',padding:'12px',lineHeight:'32px',fontSize:'18px',fontFamily:'IBM Plex Sans, sans-serif'}}>
+                               
+                                Check out our store we promise to have new properties lined up for you. Take advantage of our platform to add new or edit already added properties.
+                               
+                                
+                            </Typography>}
                          </div>
                     </Container> 
                 </Grid>}

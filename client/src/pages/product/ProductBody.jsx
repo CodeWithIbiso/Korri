@@ -101,41 +101,41 @@ export default function ProductBody() {
                    <Grid item xs={12}sm={12}>
                        {/* <Grid item sm={3}> */}
                          <div  style={{display:'flex',flexDirection:'row',width:''}}>
-                         <Button onClick={()=>setMedia(()=>'image')}variant='outlined' style={{borderRadius:0, fontFamily:'segoe ui',minHeight:'55px',fontSize:12,padding:25}} >Image View</Button>
-                         <Button onClick={()=>setMedia(()=>'video')}variant='outlined' style={{borderRadius:0, fontFamily:'segoe ui',minHeight:'55px',fontSize:12,padding:25}} >Video</Button>
-                         <Button variant='outlined' style={{borderRadius:0 ,fontFamily:'segoe ui',minHeight:'55px',fontSize:12,padding:25}}>Map View</Button>
-                         <Button variant='outlined' style={{borderRadius:0, fontFamily:'segoe ui',minHeight:'55px',fontSize:12,padding:25}}>Booking</Button>
+                         <Button onClick={()=>setMedia(()=>'image')}variant='outlined' style={{borderRadius:0, fontFamily:'segoe ui',minHeight:'55px',fontSize:12,padding:25,fontFamily:'IBM Plex Sans, sans-serif',}} >Image View</Button>
+                         <Button onClick={()=>setMedia(()=>'video')}variant='outlined' style={{borderRadius:0, fontFamily:'segoe ui',minHeight:'55px',fontSize:12,padding:25,fontFamily:'IBM Plex Sans, sans-serif',}} >Video</Button>
+                         <Button variant='outlined' style={{borderRadius:0 ,fontFamily:'segoe ui',minHeight:'55px',fontSize:12,padding:25,fontFamily:'IBM Plex Sans, sans-serif',}}>Map View</Button>
+                         <Button variant='outlined' style={{borderRadius:0, fontFamily:'segoe ui',minHeight:'55px',fontSize:12,padding:25,fontFamily:'IBM Plex Sans, sans-serif',}}>Booking</Button>
                          </div>
                        </Grid>
              </Grid>
              <Grid container style={{paddingTop:'15px'}} spacing={3}> 
                 <Grid item sm={6} style={{background:''}}>
                      <Paper style={{borderRadius:0,fontFamily:'segoe ui' ,lineHeight:'5px', padding:15,minWidth:'50px',background:'#ede7f6',minHeight:'50px'}}>
-                      <strong style={{fontWeight:500,lineHeight:'25px'}}><h3 style={{marginTop:0, fontWeight:500}}>PROPERTY DESCRIPTION:</h3>{each?.Description ===''?<p style={{color:'gray'}}>No property description found !</p>:each?.Description}</strong>
+                      <strong style={{fontWeight:500,lineHeight:'25px'}}><h3 style={{marginTop:0, fontWeight:800,fontFamily:'IBM Plex Sans, sans-serif',}}>PROPERTY DESCRIPTION:</h3>{each?.Description ===''?<p style={{color:'gray',fontFamily:'IBM Plex Sans, sans-serif',}}>No property description found !</p>:each?.Description}</strong>
                   {theType === 'properties' &&  
                   <Grid container style={{marginTop:70,fontFamily:'segoe ui'}}>
                        <Grid item sm={6}>
-                         <Typography variant='body2' style={{paddingBottom:5,fontFamily:'segoe ui'}}><strong> Property type : </strong>{each?.PropertyType}</Typography>
-                         <Typography variant='body2' style={{paddingBottom:5,fontFamily:'segoe ui'}}><strong>Baths :</strong> {each?.Baths} </Typography>
-                         <Typography variant='body2' style={{paddingBottom:5,fontFamily:'segoe ui'}}><strong>Designation :</strong> {each?.Designation} </Typography>
-                         <Typography variant='body2' style={{paddingBottom:5,fontFamily:'segoe ui'}}><strong>Kitchens :</strong>  {each?.Kitchen}</Typography>
-                         <Typography variant='body2' style={{paddingBottom:5,fontFamily:'segoe ui'}}><strong>Furnishing :</strong>  {each?.Furnishing} </Typography>
+                         <Typography variant='body2' style={{paddingBottom:5,fontFamily:'segoe ui',fontFamily:'IBM Plex Sans, sans-serif',}}><strong> Property type : </strong>{each?.PropertyType}</Typography>
+                         <Typography variant='body2' style={{paddingBottom:5,fontFamily:'segoe ui',fontFamily:'IBM Plex Sans, sans-serif',}}><strong>Baths :</strong> {each?.Baths} </Typography>
+                         <Typography variant='body2' style={{paddingBottom:5,fontFamily:'segoe ui',fontFamily:'IBM Plex Sans, sans-serif',}}><strong>Designation :</strong> {each?.Designation} </Typography>
+                         <Typography variant='body2' style={{paddingBottom:5,fontFamily:'segoe ui',fontFamily:'IBM Plex Sans, sans-serif',}}><strong>Kitchens :</strong>  {each?.Kitchen}</Typography>
+                         <Typography variant='body2' style={{paddingBottom:5,fontFamily:'segoe ui',fontFamily:'IBM Plex Sans, sans-serif',}}><strong>Furnishing :</strong>  {each?.Furnishing} </Typography>
                        </Grid>
                        <Grid item sm={6}>
-                         <Typography variant='body2' style={{paddingBottom:5,fontFamily:'segoe ui'}}><strong>Location :</strong>  {each?.Location}</Typography>
-                         <Typography variant='body2' style={{paddingBottom:5,fontFamily:'segoe ui'}}><strong>Room size :</strong>  {each?.RoomDimensions}</Typography>
-                         <Typography variant='body2' style={{paddingBottom:5,fontFamily:'segoe ui'}}><strong>Price :</strong> {each?.PriceMonthlyYearly}</Typography>
-                         <Typography variant='body2' style={{paddingBottom:5,fontFamily:'segoe ui'}}><strong>Owner details :</strong> Hidden</Typography> 
+                         <Typography variant='body2' style={{paddingBottom:5,fontFamily:'segoe ui',fontFamily:'IBM Plex Sans, sans-serif',}}><strong>Location :</strong>  {each?.Location}</Typography>
+                         <Typography variant='body2' style={{paddingBottom:5,fontFamily:'segoe ui',fontFamily:'IBM Plex Sans, sans-serif',}}><strong>Room size :</strong>  {each?.RoomDimensions}</Typography>
+                         <Typography variant='body2' style={{paddingBottom:5,fontFamily:'segoe ui',fontFamily:'IBM Plex Sans, sans-serif',}}><strong>Price :</strong> {each?.PriceMonthlyYearly}</Typography>
+                         <Typography variant='body2' style={{paddingBottom:5,fontFamily:'segoe ui',fontFamily:'IBM Plex Sans, sans-serif',}}><strong>Owner details :</strong> Hidden</Typography> 
                        </Grid>
                        </Grid>
                        }
                        {theType === 'globalProperties'&&  <Grid container style={{marginTop:70,fontFamily:'segoe ui'}}>
  
                          <Grid item sm={6}>
-                         <Typography variant='body2' style={{paddingBottom:5,fontFamily:'segoe ui'}}><strong> Property type : </strong>{each?.GlobalPropertyType}</Typography>
-                          <Typography variant='body2' style={{paddingBottom:5,fontFamily:'segoe ui'}}><strong>Designation :</strong>  {each?.Designation} </Typography>
-                         <Typography variant='body2' style={{paddingBottom:5,fontFamily:'segoe ui'}}><strong>Quantity :</strong> {each?.GlobalQuantity} </Typography>
-                         <Typography variant='body2' style={{paddingBottom:5,fontFamily:'segoe ui'}}><strong>Location :</strong>  {each?.GlobalLocation}</Typography>
+                         <Typography variant='body2' style={{paddingBottom:5,fontFamily:'segoe ui',fontFamily:'IBM Plex Sans, sans-serif',}}><strong> Property type : </strong>{each?.GlobalPropertyType}</Typography>
+                          <Typography variant='body2' style={{paddingBottom:5,fontFamily:'segoe ui',fontFamily:'IBM Plex Sans, sans-serif',}}><strong>Designation :</strong>  {each?.Designation} </Typography>
+                         <Typography variant='body2' style={{paddingBottom:5,fontFamily:'segoe ui',fontFamily:'IBM Plex Sans, sans-serif',}}><strong>Quantity :</strong> {each?.GlobalQuantity} </Typography>
+                         <Typography variant='body2' style={{paddingBottom:5,fontFamily:'segoe ui',fontFamily:'IBM Plex Sans, sans-serif',}}><strong>Location :</strong>  {each?.GlobalLocation}</Typography>
                        </Grid>
                        <Grid item sm={6}>
                          {/* <Typography variant='body2' style={{paddingBottom:5,fontFamily:'segoe ui'}}><strong>Location :</strong>  {each.Location}</Typography> */}
@@ -145,31 +145,17 @@ export default function ProductBody() {
                      </Grid>}
                      </Paper>
                      <Paper style={{borderRadius:0,fontFamily:'segoe ui' ,lineHeight:'5px', padding:15,minWidth:'50px',background:'#ff80ab',minHeight:'50px',marginTop:10,color:''}}>
-                       <strong style={{fontWeight:700,lineHeight:'25px'}}><h3 style={{marginTop:0, fontWeight:500,marginBottom:0}}>DISCLAIMER:</h3>This property is a five bedroom flat with a pool in the 
-                       living room, it has sharks in the toilet but hold on they work here.
-                       So if youre interested ..... check it out , book and lots more. We've
-                       got you covered.it has sharks in the toilet but hold on they work here.
-                       So if youre interested ..... check it out , book and lots more. We've
-                       got you covered.</strong>
+                       <strong style={{fontWeight:700,lineHeight:'25px',fontFamily:'IBM Plex Sans, sans-serif',}}><h3 style={{marginTop:0, fontWeight:500,marginBottom:0,fontFamily:'IBM Plex Sans, sans-serif',}}>DISCLAIMER:</h3>
+                       Properties on our platform are not verified , do well to verify with seller to prevent scams and false advertising. Korri give sellers and buyers the opportunity to display and find properties but does not monitor the validity of these properties</strong>
                      </Paper>
                 </Grid>
                 <Grid item sm={6}>
                  <Paper style={{borderRadius:0,fontFamily:'segoe ui' ,lineHeight:'5px', padding:15,minWidth:'50px',background:'#e1f5fe',minHeight:'50px' ,color:''}}>
-                       <strong style={{fontWeight:700,color:'#263238',lineHeight:'25px'}}><h3 style={{marginTop:0, fontWeight:700,marginBottom:0}}>NOTICE:</h3>This property is a five bedroom flat with a pool in the 
-                       living room, it has sharks in the toilet but hold on they work here.
-                       So if youre interested ..... check it out , book and lots more. We've
-                       got you covered.it has sharks in the toilet but hold on they work here.
-                       So if youre interested ..... check it out , book and lots more. We've
-                       got you covered. it has sharks in the toilet but hold on they work here.
-                       So if youre interested ..... check it out , book and lots more. We've
-                       got you covered.it has sharks in the toilet but hold on they work here.
-                       So if youre interested ..... check it out , book and lots more. We've
-                       got you covered.
-                       <br/>1. Lorem ipsum dolor siti amen fit solos po
-                       <br/>2. Lorem ipsum dolor siti amen fit solos po
-                       <br/>3. Lorem ipsum dolor siti amen fit solos po
-                       <br/>4. Lorem ipsum dolor siti amen fit solos po
-                       <br/>5. Lorem ipsum dolor siti amen fit solos po
+                       <strong style={{fontWeight:700,color:'#263238',lineHeight:'25px',fontFamily:'IBM Plex Sans, sans-serif',}}><h3 style={{marginTop:0, fontWeight:700,marginBottom:0,fontFamily:'IBM Plex Sans, sans-serif',}}>NOTICE:</h3>
+                       <br/>1. Do well to contact sellers before making purchases
+                       <br/>2. Meet up if you will at an open space if you will
+                       <br/>3. Always ask for credentials from buyers before making purchases
+                       <br/>4. Do well to verify the validity and authencity of these properties
                      </strong>
                      </Paper>
                      <div style={{minHeight:'170px',maxWidth:'100%',display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center'}}>

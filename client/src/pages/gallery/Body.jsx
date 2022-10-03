@@ -325,25 +325,25 @@ const    cueIds = cue?.ids
             <Grid item sm={queue === false || reduxStoreQueue.length<1?12:9} className={classes.row}>
                 <div style={{fontWeight:"bold"}}>
                    {result === 'gallery' && current==='gallery' ?  
-                    <Chip label='CURRENT PROPERTIES' variant='outlined'  style={{color:'white',background:'#263238',borderColor:'orange'}}   className={classes.font2}/>
-                    :<Chip label='CURRENT PROPERTIES' onClick={currentProperties}  variant='outlined'   className={classes.font2}/>
+                    <Chip label='CURRENT PROPERTIES' variant='outlined'  style={{color:'white',background:'#263238',borderColor:'orange',fontFamily:'IBM Plex Sans, sans-serif',}}   className={classes.font2}/>
+                    :<Chip label='CURRENT PROPERTIES' onClick={currentProperties}  variant='outlined'   className={classes.font2} style={{fontFamily:'IBM Plex Sans, sans-serif',}}/>
                     }
                      
-                    { result === 'buy' && <Chip label='FOR SALE' variant='outlined'   className={classes.font2}  style={{color:'white',background:'#263238',borderColor:'orange'}}/>}
+                    { result === 'buy' && <Chip label='FOR SALE' variant='outlined'   className={classes.font2}  style={{color:'white',background:'#263238',borderColor:'orange',fontFamily:'IBM Plex Sans, sans-serif',}}/>}
                     {result !=='buy'&&  
-                    <Chip label='FOR SALE' variant='outlined' onClick={forSale}  className={classes.font2}/>
+                    <Chip label='FOR SALE' variant='outlined' onClick={forSale}  className={classes.font2} style={{fontFamily:'IBM Plex Sans, sans-serif',}}/>
                     }
-                    { result === 'rent'&&<Chip label='FOR RENT' variant='outlined'   className={classes.font2} style={{color:'white',background:'#263238',borderColor:'orange'}}/>}
+                    { result === 'rent'&&<Chip label='FOR RENT' variant='outlined'   className={classes.font2} style={{color:'white',background:'#263238',borderColor:'orange',fontFamily:'IBM Plex Sans, sans-serif',}}/>}
                     { result !=='rent'&&
-                    <Chip label='FOR RENT' variant='outlined' onClick={forRent}    className={classes.font2} />
+                    <Chip label='FOR RENT' variant='outlined' onClick={forRent}    className={classes.font2}  style={{fontFamily:'IBM Plex Sans, sans-serif',}}/>
                     } 
                     {current === 'apartments'?
-                    <Chip label='APARTMENTS' variant='outlined' onClick={()=>setCurrent('apartments')}  style={{color:'white',background:'#263238',borderColor:'orange'}}   className={classes.font2}/>
-                    :<Chip label='APARTMENTS' variant='outlined' onClick={apartments}    className={classes.font2}/>
+                    <Chip label='APARTMENTS' variant='outlined' onClick={()=>setCurrent('apartments')}  style={{color:'white',background:'#263238',borderColor:'orange',fontFamily:'IBM Plex Sans, sans-serif',}}   className={classes.font2}/>
+                    :<Chip label='APARTMENTS' variant='outlined' onClick={apartments}    className={classes.font2} style={{fontFamily:'IBM Plex Sans, sans-serif',}}/>
                     }
                     {current === 'shops'?
-                    <Chip label='SHOPS' variant='outlined' onClick={()=>{setCurrent('shops')}}  style={{color:'white',background:'#263238',borderColor:'orange'}} className={classes.font2}/> 
-                    :<Chip label='SHOPS' variant='outlined' onClick={()=>{shops();setCurrent('shops')}}  className={classes.font2}/> 
+                    <Chip label='SHOPS' variant='outlined' onClick={()=>{setCurrent('shops')}}  style={{color:'white',background:'#263238',borderColor:'orange',fontFamily:'IBM Plex Sans, sans-serif',}} className={classes.font2}/> 
+                    :<Chip label='SHOPS' variant='outlined' onClick={()=>{shops();setCurrent('shops')}}  className={classes.font2} style={{fontFamily:'IBM Plex Sans, sans-serif',}}/> 
                     }
                     {reduxStoreQueue.length>=1 &&<Chip onClick={handleQueue} label={queue===false? 'OPEN QUEUE':'CLOSE QUEUE'} variant='outlined'   className={classes.font2}/>}                
                    

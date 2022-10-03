@@ -129,6 +129,11 @@ export default function Formikk({setSigning,signing,handleSubmit}) {
     const  loading =useSelector((state)=>state.loading.isLoading)  
     const  error =useSelector((state)=>state.error.isError)  
     const  invalid =useSelector((state)=>state.error.isExist)  
+    const demoDetails = {
+        email:'demo@demo.demo',
+        password:'demodemo'
+    }
+    const [initial,setInitial]=useState(false)
     
     // const submiting=(values)=>{
     //     handleSubmit(values)
@@ -159,16 +164,19 @@ export default function Formikk({setSigning,signing,handleSubmit}) {
     }) 
     // formik 2
     const formik2 = useFormik({
-        initialValues:{ 
-            email:'',
-            password:''
-        },
+        initialValues:
+            initial?demoDetails:{email:'',
+            password:''}
+        ,
         validationSchema: Yup.object({
             email: Yup.string().email("Invalid email address").required("Required *"),
             password: Yup.string().min(6,"Password must be at least 6 characters").required("Required *"),
             // password: Yup.string().max(50,"Must be 50 characters or less").required("Required *"),
         }),
         onSubmit:(values)=>{
+
+            // console.log(initial)
+            setInitial(demoDetails)
             handleSubmit(values)
             // console.log(values) 
             formik2.resetForm()
@@ -186,14 +194,19 @@ export default function Formikk({setSigning,signing,handleSubmit}) {
     useEffect(()=>{
         dispatch({type:'REMOVE_ERROR'})
 
-    },[location])
+    },[location]) 
+    // useEffect(()=>{
+    //     console.log(initial)
+    //     formik2.submitForm()
+
+    // },[initial])
     // console.log(formik.touched)
     // console.log(formik.errors) 
     // console.log(formik.values)
   return (
                     <div className={classes.griditems} >
                       
-                                <div><Typography variant='h4' style={{fontFamily: 'Segoe UI',color:'',fontWeight:'bold',padding:'12px'}}>{signing === true ?  'Create Account':'Login'}</Typography></div>
+                                <div><Typography variant='h4' style={{fontFamily: 'Segoe UI',color:'',fontWeight:'bold',padding:'12px',fontFamily:'IBM Plex Sans, sans-serif',}}>{signing === true ?  'Create Account':'Login'}</Typography></div>
                                     {/* <div  className={classes.icon} >
                                     <FacebookOutlinedIcon   className={classes.icons}/>
                                     <InstagramIcon  className={classes.icons}/>
@@ -241,7 +254,7 @@ export default function Formikk({setSigning,signing,handleSubmit}) {
                                     <div style={{marginTop:'15px',display:'flex',minHeight:'100%',minWidth:'100%', flexDirection:'column' ,justifyContent:'center',alignItems:'center'}}><CircularProgress color='inherit' size='40px'/></div>
                                     :<Button className={classes.btn} style={{paddingBottom:0,marginBottom:0}} color='primary' variant='contained' type='submit'>Sign Up</Button>
                                 } */}
-                                <Button className={classes.btn} style={{paddingBottom:0,marginBottom:0}} color='primary' variant='contained' type='submit'>
+                                <Button className={classes.btn} style={{paddingBottom:0,marginBottom:0,paddingBottom:10,paddingTop:10}} color='primary' variant='contained' type='submit'>
                                 {loading===true&&
                                     <div style={{ marginRight:4}}><CircularProgress color='inherit' size='10px'/></div>
                                 }
@@ -259,13 +272,18 @@ export default function Formikk({setSigning,signing,handleSubmit}) {
                          <div style={{marginTop:'15px',display:'flex',minHeight:'100%',minWidth:'100%', flexDirection:'column' ,justifyContent:'center',alignItems:'center'}}><CircularProgress color='inherit' size='40px'/></div>
                          :<Button className={classes.btn} color='secondary' variant='contained' type='submit'>Sign In</Button>
                                    } */}
-                         <Button className={classes.btn} color='secondary' variant='contained' type='submit'>
+                         <Button className={classes.btn} color='secondary' variant='contained' type='submit'  style={{paddingBottom:10,paddingTop:10}} >
                          {loading===true&&
                                     <div style={{ marginRight:4}}><CircularProgress color='inherit' size='10px'/></div>
                                 }
                                    
                              Sign In</Button>
-                        
+                             {/* <Button onClick={()=>setInitial(true)} className={classes.btn} style={{paddingBottom:10,paddingTop:10}} color='primary' variant='contained'>
+                         {loading===true&&
+                                    <div style={{ marginRight:4}}><CircularProgress color='inherit' size='10px'/></div>
+                                }
+                                   
+                             Demo Login</Button> */}
                                 </form>
                                }
                                

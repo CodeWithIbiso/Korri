@@ -28,7 +28,7 @@ const useStyles = makeStyles({
             display:'flex',
             flexDirection:'row',
             justifyContent:'right',
-            alignItems:'right',
+            fontFamily:'IBM Plex Sans, sans-serif',alignItems:'right',
         },
         font:{
             fontFamily: ' BlinkMacSystemFont',  
@@ -56,7 +56,8 @@ const useStyles = makeStyles({
             minHeight:'100%'
         } ,
         font2:{
-            fontFamily: ' segoe ui',  
+            // fontFamily: ' segoe ui',  
+            fontFamily:'IBM Plex Sans, sans-serif',
             padding:'0px',
             margin:'0px',
             fontSize:'14px',
@@ -64,6 +65,7 @@ const useStyles = makeStyles({
         },
         font3:{
             fontFamily: ' segoe ui',  
+            fontFamily:'IBM Plex Sans, sans-serif',
             padding:'0px',
             margin:'0px',
             paddingLeft:'24px',
@@ -71,7 +73,8 @@ const useStyles = makeStyles({
             fontWeight:'bold'
         },
         cardobjects:{
-            fontFamily: 'Segoe UI', 
+            // fontFamily: 'Segoe UI', 
+            fontFamily:'IBM Plex Sans, sans-serif',
             fontSize:'12px'
         },
         bottomText:{ 
@@ -79,6 +82,7 @@ const useStyles = makeStyles({
             marginBottom:'22px',
             padding:'0px',
             display:'flex',
+            fontFamily:'IBM Plex Sans, sans-serif',
             flexDirection:'row', 
             // justifyContent:'right',
             // alignItems:'right',
